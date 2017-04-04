@@ -18,7 +18,6 @@ object BingHomePage extends BasePage {
   val videoSearchLink = webDriver.findElement(By.id("scpl2"))
   val mapsSearchLink = webDriver.findElement(By.id("scpl3"))
   val newsSearchLink = webDriver.findElement(By.id("scpl4"))
-  val exploreSearchLink = webDriver.findElement(By.id("scpl5"))
   val msnLink = webDriver.findElement(By.linkText("MSN"))
   val officeOnlineLink = webDriver.findElement(By.linkText("Office Online"))
   val outlookLink = webDriver.findElement(By.id("outlook"))
@@ -30,7 +29,6 @@ object BingHomePage extends BasePage {
   val videoSearchValidation = "Videos"
   val mapsSearchValidation = "Maps"
   val newsSearchValidation = "News"
-  val exploreSearchValidation = "Explore"
   val msnLinkValidation = "MSN"
   val officeLinkValidation = "Office Online"
   val outlookValidation = "Outlook.com"
@@ -47,7 +45,6 @@ object BingHomePage extends BasePage {
     videoSearchLink.getText should be (videoSearchValidation)
     mapsSearchLink.getText should be (mapsSearchValidation)
     newsSearchLink.getText should be (newsSearchValidation)
-    exploreSearchLink.getText should be (exploreSearchValidation)
 
     msnLink.getText should be (msnLinkValidation)
     officeOnlineLink.getText should be (officeLinkValidation)
