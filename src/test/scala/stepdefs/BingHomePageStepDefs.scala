@@ -1,14 +1,9 @@
 package stepdefs
 
 // Import statements are used to import sections of code defined in external libraries or packages
-import cucumber.api.java.en.Given
 import cucumber.api.scala.{EN, ScalaDsl}
-import org.openqa.selenium.{By, WebElement}
-import org.openqa.selenium.browserlaunchers.locators.GoogleChromeLocator
-import org.openqa.selenium.support.ui.{ExpectedConditions, WebDriverWait}
 import org.scalatest.Matchers
-import pages.BasePage
-import pages._
+import pages.{BasePage, _}
 
 /*
  * Step definition files link to feature files via the 'Given', 'When', 'Then' statements.
