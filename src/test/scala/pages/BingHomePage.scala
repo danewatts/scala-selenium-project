@@ -1,8 +1,6 @@
 package pages
 
-import org.openqa.selenium.support.FindBy
 import org.openqa.selenium.{By, WebElement}
-import org.openqa.selenium.support.ui.{ExpectedConditions, WebDriverWait}
 
 /**
   * A page object model contains the variables and methods which are only used for a single page, in this case the Bing
@@ -10,20 +8,19 @@ import org.openqa.selenium.support.ui.{ExpectedConditions, WebDriverWait}
   */
 object BingHomePage extends BasePage {
 
-  val bingSearchBar = By.id("sb_form_q")
-  val bingSearchButton = By.id("sb_form_go")
+  val bingSearchBar: By = By.id("sb_form_q")
+  val bingSearchButton: By = By.id("sb_form_go")
 
-  val webSearchLink = webDriver.findElement(By.id("scpl0"))
-  val imageSearchLink = webDriver.findElement(By.id("scpl1"))
-  val videoSearchLink = webDriver.findElement(By.id("scpl2"))
-  val mapsSearchLink = webDriver.findElement(By.id("scpl3"))
-  val newsSearchLink = webDriver.findElement(By.id("scpl4"))
-  val msnLink = webDriver.findElement(By.linkText("MSN"))
-  val officeOnlineLink = webDriver.findElement(By.linkText("Office Online"))
-  val outlookLink = webDriver.findElement(By.id("outlook"))
+  def webSearchLink: WebElement = webDriver.findElement(By.id("scpl0"))
+  def imageSearchLink: WebElement = webDriver.findElement(By.id("scpl1"))
+  def videoSearchLink: WebElement = webDriver.findElement(By.id("scpl2"))
+  def mapsSearchLink: WebElement = webDriver.findElement(By.id("scpl3"))
+  def newsSearchLink: WebElement = webDriver.findElement(By.id("scpl4"))
+  def msnLink: WebElement = webDriver.findElement(By.linkText("MSN"))
+  def officeOnlineLink: WebElement = webDriver.findElement(By.linkText("Office Online"))
+  def outlookLink: WebElement = webDriver.findElement(By.id("outlook"))
 
   val pageTitle = "Bing"
-
   val webSearchValidation = "Web"
   val imageSearchValidation = "Images"
   val videoSearchValidation = "Videos"
