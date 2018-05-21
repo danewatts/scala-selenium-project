@@ -1,5 +1,5 @@
+import cucumber.api.CucumberOptions
 import cucumber.api.junit.Cucumber
-import cucumber.api.junit.Cucumber.Options
 import org.junit.runner.RunWith
 
 /*
@@ -7,9 +7,9 @@ import org.junit.runner.RunWith
  */
 
 @RunWith(classOf[Cucumber])
-@Options(
-  features = Array("/home/tom/Applications/hmrc-development-environment/hmrc/scala-selenium-project/src/test/resources/features"),
-  glue = Array("/home/tom/Applications/hmrc-development-environment/hmrc/scala-selenium-project/src/test/scala/stepdefs"),
+@CucumberOptions(
+  features = Array("src/test/resources/features"),
+  glue = Array("stepdefs"),
   format = Array("pretty", "html:target/cucumber-report"),
   tags = Array("@wip")
 )
